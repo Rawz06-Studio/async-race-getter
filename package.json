@@ -1,6 +1,6 @@
 {
   "name": "async-race-getter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Récupérateur de seeds Async Race depuis racetime.gg",
   "type": "module",
   "main": "server.js",
