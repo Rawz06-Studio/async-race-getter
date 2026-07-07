@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    uses: RawZ06-Studio/.github/.github/workflows/node-ci-release.yml@main
+    permissions:
+      contents: write
+    with:
+      publishable: false
+    secrets: inherit
+
+  docker:
+    needs: release
+    uses: RawZ06-Studio/.github/.github/workflows/docker-build-push.yml@main
+    permissions:
+      contents: write
+      packages: write
+    with:
+      image_name: async-race-getter
+      dokploy_app_id: 3_xWRLZyypNtHVMNP049j
+    secrets: inherit
