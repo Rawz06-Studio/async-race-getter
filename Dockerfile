@@ -1,5 +1,5 @@
 # Use official Node.js LTS image
-FROM node:22-alpine
+FROM node:24-alpine
 
 # Set working directory
 WORKDIR /app
@@ -7,8 +7,7 @@ WORKDIR /app
 # Copy package files
 COPY package.json pnpm-lock.yaml* ./
 
-# Install pnpm globally
-RUN npm install -g pnpm
+RUN corepack enable
 
 # Install dependencies
 RUN pnpm install --frozen-lockfile --prod
