@@ -22,5 +22,5 @@ jobs:
       packages: write
     with:
       image_name: async-race-getter
-      dokploy_app_id: 3_xWRLZyypNtHVMNP049j
+      dokploy_app_id: SFM5DzFv3Wvc-FpeP12X_
     secrets: inherit
